@@ -22,16 +22,24 @@ class TestSportsTeam < MiniTest::Test
     end
 
     def test_players
-      assert_equal("Shuggie", "Jimmy", "Davie", "Frankie", "Boab", @sportsteam.players)
+      assert_equal(["Shuggie", "Jimmy", "Davie", "Frankie", "Boab"], @sportsteam.players)
     end
 
-    def test_coach
-      assert_equal("Coach McGregor", @sportsteam.coach)
+    def test_coach_name
+      assert_equal("Coach McGregor", @sportsteam.coach_name)
     end
 
-    # def test_set_coach(coach)
-    #   @coach.set_coach ("Coach McDonald")
-    #   assert_equal("Coach McDonald", @couch.coach)
-    # end
+    def test_set_coach_name
+      @sportsteam.coach_name = "Coach McDonald"
+      assert_equal("Coach McDonald", @sportsteam.coach_name)
+    end
+
+    def test_additonal_player
+      assert_equal(["Shuggie", "Jimmy", "Davie", "Frankie", "Boab", "Stevie"],@sportsteam.additonal_player("Stevie"))
+    end
+
+    def test_player_name
+      assert_equal(true, @sportsteam.player_name("Shuggie"))
+    end
 
 end
