@@ -31,7 +31,7 @@ class TestStudentAccount < MiniTest::Test
   end
 
   def test_favourite_language
-    assert_equal("I love Ruby!", @student_account.favourite_langage("I love Ruby!"))
+    assert_equal("I love Ruby!", @student_account.favourite_langage("Ruby"))
   end
 
 end

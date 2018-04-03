@@ -28,7 +28,7 @@ class StudentAccount
   end
 
   def favourite_langage(language)
-    return language
+    return "I love #{language}!"
   end
 
 end
